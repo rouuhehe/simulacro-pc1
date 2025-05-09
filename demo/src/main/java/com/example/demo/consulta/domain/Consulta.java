@@ -6,6 +6,7 @@ import com.example.demo.paciente.domain.EstadoPaciente;
 import com.example.demo.paciente.domain.Paciente;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,7 +16,7 @@ public class Consulta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime fechaHora;
+    private LocalDate fecha;
 
     private String motivo;
 

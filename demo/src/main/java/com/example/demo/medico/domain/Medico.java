@@ -39,8 +39,8 @@ public class Medico {
     private String email;
 
     @OneToMany(mappedBy = "medicoCabecera")
-    private List<Paciente> pacientes;
+    private List<Paciente> pacientesMedico;
 
-    @OneToMany
+    @OneToMany(mappedBy = "medico", cascade = CascadeType.ALL)
     private List<Consulta> consultas;
 }
